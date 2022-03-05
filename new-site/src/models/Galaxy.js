@@ -7,13 +7,13 @@ title: Galaxy
 */
 
 import React, { useRef } from 'react'
-import { useGLTF, useAnimations } from '@react-three/drei'
+import { useGLTF } from '@react-three/drei'
 
 export const Galaxy = ({ ...props }) => {
   const group = useRef()
-  const { nodes, materials, animations } = useGLTF("galaxy.glb");
+  const { nodes, materials } = useGLTF("galaxy.glb");
   console.log(nodes)
-  const { actions } = useAnimations(animations, group)
+  // const { actions } = useAnimations(animations, group)
   return (
     <group ref={group} {...props} dispose={null}>
       <group rotation={[-Math.PI / 2, 0, 0]}>
