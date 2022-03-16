@@ -2,8 +2,10 @@ import './App.css';
 // import { initializeApp } from 'firebase/app';
 // import { getStorage} from 'firebase/storage'
 import { Canvas } from 'react-three-fiber';
-import {OrbitControls, Stars} from '@react-three/drei'
+import {OrbitControls, Stars} from '@react-three/drei';
 import {Galaxy} from './models/Galaxy';
+import {Perspective} from './models/Perspective';
+import {Wave} from './models/Wave';
 import HomeGrid from './Layout/HomeGrid';
 import styled from 'styled-components';
 
@@ -34,12 +36,46 @@ function App() {
     <div  className='canvas'>
       <HomeGrid>    
       <Canvas>
+        <ambientLight intensity={0.5} />
       <OrbitControls/>
-      <Galaxy />
       <Stars/>       
       </Canvas>
+      <Canvas>
+        <ambientLight intensity={0.5} />
+      <OrbitControls/>
+      <Galaxy scale={[0.06,0.06,0.06]}/>       
+      </Canvas>
+
+      <Canvas>
+        <ambientLight intensity={0.5} />
+      <OrbitControls/>
+      <Wave />       
+      </Canvas>
+
+      <Canvas>
+        <ambientLight intensity={0.5} />
+      <OrbitControls/>
+      <Perspective />       
+      </Canvas>
+
+      <Canvas>
+        <ambientLight intensity={0.5} />
+      <OrbitControls/>
+      <Galaxy />       
+      </Canvas>
+
+      <Canvas>
+        <ambientLight intensity={0.5} />
+      <OrbitControls/>
+      <Wave />       
+      </Canvas>
       </HomeGrid>
+
+
+
+    
     </div>
+    
   );
 }
 

@@ -16,7 +16,7 @@ export const Galaxy = ({ ...props }) => {
   // const { actions } = useAnimations(animations, group)
   return (
     <group ref={group} {...props} dispose={null}>
-      <group rotation={[-Math.PI / 2, 0, 0]}>
+      <group rotation={[-Math.PI / 3, 1, 1]}>
         <group rotation={[Math.PI / 2, 0, 0]}>
           <group rotation={[-Math.PI / 2, 0, 0]}>
             <mesh geometry={nodes['Galaxy_Material_#65_0'].geometry} material={materials.Material_65} />
