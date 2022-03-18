@@ -8,6 +8,8 @@ import {Perspective} from './models/Perspective';
 import {Wave} from './models/Wave';
 import HomeGrid from './Layout/HomeGrid';
 import styled from 'styled-components';
+import {CosmicWidget} from './models/Cosmic_widget';
+import { useState, useEffect } from 'react';
 
 // const firebaseConfig = {
 //   apiKey: "AIzaSyC33Ivc0vsLk12A37xdWtdjmweTNm3p0xM",
@@ -31,6 +33,8 @@ import styled from 'styled-components';
 // place the canvas in a home grid
 const Grid = styled(HomeGrid)``;
 function App() {
+// animate the cosmic widget by changing the rotation along the z axis
+
 
   return (
     <div  className='canvas'>
@@ -61,7 +65,7 @@ function App() {
       <Canvas>
         <ambientLight intensity={0.5} />
       <OrbitControls/>
-      <Galaxy />       
+      <CosmicWidget />       
       </Canvas>
 
       <Canvas>
